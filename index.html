@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Warmars2.0 by Corlobin</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="without-description">
+        <h1>Warmars2.0</h1>
+        <p></p>
+        <p class="view"><a href="https://github.com/Corlobin/WarMars2.0">View the Project on GitHub <small>Corlobin/WarMars2.0</small></a></p>
+        <ul>
+          <li><a href="https://github.com/Corlobin/WarMars2.0/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Corlobin/WarMars2.0/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Corlobin/WarMars2.0">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>
+<a id="war-mars" class="anchor" href="#war-mars" aria-hidden="true"><span class="octicon octicon-link"></span></a>War Mars</h2>
+
+<p><strong>War Mars</strong> é um jogo que está sendo desenvolvido para Windows/Linux/MacOS na línguagem Python.</p>
+
+<h2>
+<a id="história" class="anchor" href="#hist%C3%B3ria" aria-hidden="true"><span class="octicon octicon-link"></span></a>História</h2>
+
+<p>Em <strong>Wars Mars</strong>, o planeta terra fica completamente sem água e a vida na Terra está acabando rapidamente, após alguns meses de agonia e mortes um grupo de pesquisadores da NASA descobre que em Marte possui água que pode ser utilizada pelo ser humano, além disso, é um planeta possível para o ser humano viver. A NASA então rapidamente cria uma missão para enviar astronautas a Marte para captar essa água e tornar Marte um novo planeta habitável, mas, o que eles não esperavam é que existe já existe vida em marte e que esses alienígenas lutarão pela sua preciosa água. </p>
+
+<p>Apresentado o cenário pré-apocaliptico da Terra passando então para a luta por água em Marte, agora é a parte do jogador lutar pela sua sobrevivência e pela sobrevivência da raça humana. Deixamos o jogador com helicóptero armado para combater diversos outros helicópteros de alienígenas que vem em sua direção para mata-lo e defender seu planeta.</p>
+
+<h3>
+<a id="etapas-de-desenvolvimento" class="anchor" href="#etapas-de-desenvolvimento" aria-hidden="true"><span class="octicon octicon-link"></span></a>Etapas de desenvolvimento</h3>
+
+<p>Para o desenvolvimento desse software foi utilizado o modelo de desenvolvimento em cascata como o seu objetivo é que o desenvolvimento siga sempre para frente.</p>
+
+<ul>
+<li>Requirimento</li>
+<li>Projeto</li>
+<li>Implementação</li>
+<li>Codificação</li>
+<li>Manutenção</li>
+</ul>
+
+<h3>
+<a id="padrões-de-projeto" class="anchor" href="#padr%C3%B5es-de-projeto" aria-hidden="true"><span class="octicon octicon-link"></span></a>Padrões de projeto</h3>
+
+<p>Assim como estudado na disciplina de Programação Orientada a Objetos 2 no Instituto Federal do Espirito Santo, sendo esta, ministrada pelo Msc. Paulo Sérgio Santos, foi implementada diversos padrões de projetos para melhorar o desenvolvimento do software, facilitando uma manutenção. 
+Os padrões de projetos implementados em PYTHON foram os seguintes:</p>
+
+<p><strong>Fachada</strong>: Foi implementado como o objetivo de compor funções, deixando o código mais limpo, legível e de fácil manutenção. A seguir um techo de código que utiliza o padrão fachada.</p>
+
+<p><strong>Adapter</strong>: Não houve a necessidade de integrar uma interface com a outra. </p>
+
+<p><strong>Singleton</strong>: Foi implementada em todos os controladores, porque não haveria a necessidade de carregar os botões, imagens de menu, background diversas vezes das telas. Nos controles, temos as instanciações das Telas respectivas no Init(), desse modo, as telas seriam carregadas uma vez, poupando memória e melhorando o desempenho do game. Para a implementação do Padrão de Projetos Singleton foi utilizado o livro Design Patters in Python <strong>(Community experience distilled) Gennadiy Zlobin-Learning Python design patterns _ a practical and fast-paced guide exploring Python design patterns-Packt Pub (2013)</strong></p>
+
+<p><strong>Fábrica</strong> Foi implementado o padrão de projeto Fábrica para a criação de Inimigos no jogo. A implementação desse <em>método fábrica</em> carece de amadurecimento, uma vez que todos os tutoriais de implementação desse padrão na línguagem python não traziam as informações necessárias para a implementação concisa. <strong><a href="http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Factory.html">http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Factory.html</a></strong></p>
+
+<p><strong>Builder</strong>: Não foi possível implementar este padrão de projetos pois houve uma necessidade de carência de informações de como implementa-lo na línguagem Python.</p>
+
+<p><strong>Decorator</strong>: Nessa versão do jogo não houve necessidade de implementar esse padrão de projetos, pois ainda não há um modo de "Level", mas em futuras versões terão "Ups" nos nívels das naves com mudanças de armas/cores, nesse caso, essa implementação será bastante útil. </p>
+
+<h3>
+<a id="o-padrão-mvc" class="anchor" href="#o-padr%C3%A3o-mvc" aria-hidden="true"><span class="octicon octicon-link"></span></a>O padrão MVC</h3>
+
+<p>O padrão MVC foi utilizado para abstrair a interação das telas das demais tornando o modelo mais restritivo e não trazendo ao usuário falhas de banco de dados por exemplo. Para a aplicação do modelo MVC, foram criadas as pastas:</p>
+
+<ol>
+<li>Application
+
+<ol>
+<li><strong>Application</strong></li>
+</ol>
+</li>
+<li>CCI
+
+<ol>
+<li><strong>CtrlTelaCadastro</strong></li>
+<li><strong>CtrlTelaCenario</strong></li>
+<li><strong>CtrlTelaJogo</strong></li>
+<li><strong>CtrlTelaLogin</strong></li>
+<li><strong>CtrlTelaMenu</strong></li>
+<li><strong>CtrlTelaRanking</strong></li>
+</ol>
+</li>
+<li>CDP
+
+<ol>
+<li><strong>Balas</strong></li>
+<li><strong>Fragmento</strong></li>
+<li><strong>Fumaca</strong></li>
+<li><strong>Helicoptero</strong></li>
+<li><strong>Inimigo</strong></li>
+<li><strong>Municao</strong></li>
+<li><strong>Pessoa</strong></li>
+</ol>
+</li>
+<li>CGD
+
+<ol>
+<li><strong>DAOJogador</strong></li>
+<li><strong>Error</strong></li>
+<li><strong>Imagem</strong></li>
+<li><strong>Som</strong></li>
+</ol>
+</li>
+<li>CGT
+
+<ol>
+<li><strong>AplGerenciarJogador</strong></li>
+</ol>
+</li>
+<li>CIH
+
+<ol>
+<li><strong>TelaCadastro</strong></li>
+<li><strong>TelaCenario</strong></li>
+<li><strong>TelaCreditos</strong></li>
+<li><strong>TelaJogo</strong></li>
+<li><strong>TelaLogin</strong></li>
+<li><strong>TelaMenu</strong></li>
+<li><strong>TelaRanking</strong></li>
+</ol>
+</li>
+<li>DADOS</li>
+<li>TESTS</li>
+<li>UTIL
+
+<ol>
+<li><strong>GameFactory</strong></li>
+<li><strong>GameInimigo</strong></li>
+<li><strong>Singleton</strong></li>
+</ol>
+</li>
+</ol>
+
+<h3>
+<a id="diagrama-de-classes--diagrama-de-padrões" class="anchor" href="#diagrama-de-classes--diagrama-de-padr%C3%B5es" aria-hidden="true"><span class="octicon octicon-link"></span></a>Diagrama de classes + Diagrama de padrões</h3>
+
+<p>imagem</p>
+
+<h3>
+<a id="soonar" class="anchor" href="#soonar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Soonar</h3>
+
+<p>avaliação</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/Corlobin">Corlobin</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
