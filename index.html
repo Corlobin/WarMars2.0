@@ -1,37 +1,25 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Warmars2.0 : ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Warmars2.0</title>
+    <meta charset="UTF-8">
+    <title>Warmars2.0 by Corlobin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Warmars2.0</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/Corlobin/WarMars2.0" class="btn">View on GitHub</a>
+      <a href="https://github.com/Corlobin/WarMars2.0/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Corlobin/WarMars2.0/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Corlobin/WarMars2.0">View on GitHub</a>
-
-          <h1 id="project_title">Warmars2.0</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Corlobin/WarMars2.0/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Corlobin/WarMars2.0/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h2>
+    <section class="main-content">
+      <h2>
 <a id="war-mars" class="anchor" href="#war-mars" aria-hidden="true"><span class="octicon octicon-link"></span></a>War Mars</h2>
 
 <p><img src="https://raw.githubusercontent.com/Corlobin/WarMars2.0/master/ifes/dados/imagens/War-in-Mars.png" alt=""></p>
@@ -70,13 +58,13 @@ Os padrões de projetos implementados em PYTHON foram os seguintes:</p>
 
 <p><strong>Adapter</strong>: Não houve a necessidade de integrar uma interface com a outra. </p>
 
-<p><strong>Singleton</strong>: Foi implementada em todos os controladores, porque não haveria a necessidade de carregar os botões, imagens de menu, background diversas vezes das telas. Nos controles, temos as instanciações das Telas respectivas no Init(), desse modo, as telas seriam carregadas uma vez, poupando memória e melhorando o desempenho do game. Para a implementação do Padrão de Projetos Singleton foi utilizado o livro Design Patters in Python <strong>(Community experience distilled) Gennadiy Zlobin-Learning Python design patterns _ a practical and fast-paced guide exploring Python design patterns-Packt Pub (2013)</strong></p>
+<p><strong>Singleton</strong>: Foi implementada em todos os controladores e no metodo fabrica, porque não haveria a necessidade de carregar os botões, imagens de menu, background diversas vezes das telas. Nos controles, temos as instanciações das Telas respectivas no Init(), desse modo, as telas seriam carregadas uma vez, poupando memória e melhorando o desempenho do game. Para a implementação do Padrão de Projetos Singleton foi utilizado o livro Design Patters in Python <strong>(Community experience distilled) Gennadiy Zlobin-Learning Python design patterns _ a practical and fast-paced guide exploring Python design patterns-Packt Pub (2013)</strong></p>
 
-<p><strong>Fábrica</strong> Foi implementado o padrão de projeto Fábrica para a criação de Inimigos no jogo. A implementação desse <em>método fábrica</em> carece de amadurecimento, uma vez que todos os tutoriais de implementação desse padrão na línguagem python não traziam as informações necessárias para a implementação concisa. <strong><a href="http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Factory.html">http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Factory.html</a></strong></p>
+<p><strong>Método Fábrica</strong> Foi criado uma metodo fabrica para criar os inimigos. FabricaAbstrata não foi implementado pois nao exitem por enquanto inimigos com comportamentos diferentes. <strong><a href="http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Factory.html">http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Factory.html</a></strong></p>
 
-<p><strong>Builder</strong>: Não foi possível implementar este padrão de projetos pois houve uma necessidade de carência de informações de como implementa-lo na línguagem Python.</p>
+<p><strong>Builder</strong>: Por enquanto não houve necessidade de usar.</p>
 
-<p><strong>Decorator</strong>: Nessa versão do jogo não houve necessidade de implementar esse padrão de projetos, pois ainda não há um modo de "Level", mas em futuras versões terão "Ups" nos nívels das naves com mudanças de armas/cores, nesse caso, essa implementação será bastante útil. </p>
+<p><strong>Prototipo</strong>: Foi utilizado prototipo na classe Inimigo para definir a Imagem de cada Inimigo. </p>
 
 <h3>
 <a id="o-padrão-mvc" class="anchor" href="#o-padr%C3%A3o-mvc" aria-hidden="true"><span class="octicon octicon-link"></span></a>O padrão MVC</h3>
@@ -155,24 +143,50 @@ Os padrões de projetos implementados em PYTHON foram os seguintes:</p>
 <h3>
 <a id="diagrama-de-classes--diagrama-de-padrões" class="anchor" href="#diagrama-de-classes--diagrama-de-padr%C3%B5es" aria-hidden="true"><span class="octicon octicon-link"></span></a>Diagrama de classes + Diagrama de padrões</h3>
 
-<p><img src="https://raw.githubusercontent.com/Corlobin/WarMars2.0/master/diagrama%20padr%C3%B5es.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Corlobin/WarMars2.0/master/diagrama%20padr%C3%B5es.png" alt="">
+<img src="https://raw.githubusercontent.com/Corlobin/WarMars2.0/master/diagrama%20pastas.png" alt=""></p>
+
+<p>O padrão <strong>Singleton</strong> foi implementado nos seguintes controladores:</p>
+
+<ol>
+<li><strong>CtrlTelaCadastro</strong></li>
+<li><strong>CtrlTelaCenario</strong></li>
+<li><strong>CtrlTelaJogo</strong></li>
+<li><strong>CtrlTelaLogin</strong></li>
+<li><strong>CtrlTelaMenu</strong></li>
+<li><strong>CtrlTelaRanking</strong></li>
+</ol>
+
+<p>Para que eles não instanciem mais de uma tela por vez. Foi implementado também no <strong>MétodoFábrica</strong>, pois não preciso ficar instanciando essa classe não precisa ser instanciada mais de uma vez.</p>
 
 <h3>
 <a id="soonar" class="anchor" href="#soonar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Soonar</h3>
 
-<p>avaliação</p>
-      </section>
-    </div>
+<p>Avaliação anterior 1.0:
+<img src="https://github.com/Corlobin/WarMars2.0/blob/master/soonar.png?raw=true" alt=""></p>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Warmars2.0 maintained by <a href="https://github.com/Corlobin">Corlobin</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+<p>A avaliação do soonar nessa versão:
+<img src="https://github.com/Corlobin/WarMars2.0/blob/master/soonar2.png?raw=true" alt=""></p>
+
+<h3>
+<a id="como-jogar" class="anchor" href="#como-jogar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Como jogar?</h3>
+
+<p>Ficou interessado para jogar é bem simples. A versão do Python deve ser a 3.5, com a biblioteca <strong>pygame</strong> instalada e a biblioteca <strong>sqlite3</strong> instalada. É necessario uma IDE, sugiro que utilize a melhor, <strong>pycharm</strong>. Após isso, abra o projeto no Pycharm e execute o Application.</p>
+
+<p>Essa aplicação não foi testada sem outra IDE!</p>
+
+<p><img src="https://github.com/Corlobin/WarMars2.0/blob/master/tutorial.png?raw=true" alt=""></p>
+
+<p>Qualquer sugestão, critica e/ou ajuda é bem vinda! contato: <strong><a href="mailto:anribrasil@gmail.com">anribrasil@gmail.com</a></strong> / Equipe.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Corlobin/WarMars2.0">Warmars2.0</a> is maintained by <a href="https://github.com/Corlobin">Corlobin</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-    
+    </section>
 
+  
   </body>
 </html>
